@@ -23,7 +23,7 @@ const SignIn = () => {
                 <div className="col-md-6">
                     <div className="img">
                         <br /> <br />
-                        <img src="https://www.booking-wp-plugin.com/wp-content/uploads/2019/07/Banner-31a.jpg" alt="" />
+                        <img className='w-100' src="https://www.booking-wp-plugin.com/wp-content/uploads/2019/07/Banner-31a.jpg" alt="" />
                     </div>
                 </div>
             </div>
