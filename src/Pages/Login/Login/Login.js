@@ -48,8 +48,6 @@ const Login = () => {
             </div>
 
 
-
-            {/* <button onClick={signInWithGoogle} className="btn btn-success">Google Sign in</button> */}
         </div >
     );
 };

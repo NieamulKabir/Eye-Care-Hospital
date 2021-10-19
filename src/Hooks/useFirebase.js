@@ -13,6 +13,7 @@ const useFirebase = () => {
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    
 
     const auth = getAuth();
 
@@ -44,10 +45,19 @@ const useFirebase = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
-        .then(result => {
-            setUser(result.user);
-        })
-        .finally(() => setLoading(false));
+          .then((result) => {
+            const { email, name, PhotoURL } = result.user;
+            const user = {
+              name: name,
+              email: email,
+              photo: PhotoURL,
+            };
+            setUser(user);
+            setError("");
+          })
+          .catch((error) => {
+            setError(error.message);
+          });
       };
 
 
