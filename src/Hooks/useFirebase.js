@@ -1,4 +1,7 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
+import {
+    getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword,
+    sendEmailVerification,signInWithEmailAndPassword,sendPasswordResetEmail
+} from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/Login/Firebase/Firebase.init";
 
@@ -6,7 +9,10 @@ initializeAuthentication();
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState("");
 
     const auth = getAuth();
 
@@ -19,6 +25,59 @@ const useFirebase = () => {
             })
             .finally(() => setLoading(false));
     }
+
+
+
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    };
+    const handlePasswordChange = (e) => {
+        if (e.target.value.length < 6) {
+            console.error("password must need to be at least 6 characters");
+            return;
+        } else {
+            setPassword(e.target.value);
+        }
+    };
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password)
+        .then(result => {
+            setUser(result.user);
+        })
+        .finally(() => setLoading(false));
+      };
+
+
+      const hanleResetPassword = () => {
+        sendPasswordResetEmail(auth, email)
+          .then(() => {})
+          .catch((err) => {
+            console.log(err.message);
+          });
+      };
+
+    const handleOnSubmit = (e) => {
+        e.preventDefault();
+        console.log(email, password);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                setUser(result.user);
+                verifyEmail();
+            })
+            .catch((error) => console.log(error.message));
+    };
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser).then(() => {
+           
+        });
+    };
+
+
+
+
 
 
 
@@ -51,7 +110,7 @@ const useFirebase = () => {
         user,
         loading,
         signInWithGoogle,
-        logOut
+        logOut, handleEmailChange, handlePasswordChange, handleOnSubmit,handleLogin,error,hanleResetPassword
 
     }
 }

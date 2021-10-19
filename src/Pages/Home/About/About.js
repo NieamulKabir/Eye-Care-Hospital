@@ -9,7 +9,7 @@ const About = () => {
                 <div className="container">
                     <div className="row align-items-center mt-5">
                         <div className="col-lg-6 col-sm-6">
-                            <div>
+                            <div className="about_img">
                                 <img className="w-100" src="https://templates.hibootstrap.com/opnix/default/assets/images/about/main1.png" alt="" />
                             </div>
                         </div>

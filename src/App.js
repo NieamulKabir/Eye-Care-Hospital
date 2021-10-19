@@ -7,12 +7,13 @@ import {
 } from "react-router-dom";
 import NotFound from './Pages/NotFound/NotFound';
 import ServiceDetails from './Pages/Details/ServiceDetails/ServiceDetails';
-import Login from './Pages/Login/Login/Login';
+
 import Header from './Pages/Shared/Header/Header';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/Login/Login/PrivateRoute/PrivateRoute';
 import GetAppoinment from './Pages/Details/GetAppoinment/GetAppoinment';
 import Appointment from './Pages/Home/Appoinment/Appointment';
+import SignIn from './Pages/Login/SignIn';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <AuthProvider>
         <Router>
           <Header></Header>
+         
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -37,8 +39,8 @@ function App() {
             <PrivateRoute path="/getAppoinment">
               <GetAppoinment></GetAppoinment>
             </PrivateRoute>
-            <Route path="/login">
-              <Login></Login>
+            <Route path="/signin">
+              <SignIn></SignIn>
             </Route>
             <Route exact path="*">
               <NotFound></NotFound>

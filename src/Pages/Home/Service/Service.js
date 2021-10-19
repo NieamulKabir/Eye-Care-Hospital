@@ -9,22 +9,22 @@ const Service = ({ service }) => {
 
     return (
         <div className="container">
-            <CardGroup>
+            <CardGroup className="service_card">
                 <Card>
-                    <Card.Img variant="top" src={imgurl} />
+                    <Card.Img className="img" variant="top" src={imgurl} />
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
                         <Card.Text>
-                        {discription.slice(0, 75)}
+                            {discription.slice(0, 75)}
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                    <Link to={`/serviceDetails/${id}`}>
-                        <button className="btn btn-success">More Details ...</button>
-                    </Link>
+                        <Link to={`/serviceDetails/${id}`}>
+                            <button className="btn btn-success service_btn">More Details ...</button>
+                        </Link>
                     </Card.Footer>
                 </Card>
-            
+
             </CardGroup>
 
 

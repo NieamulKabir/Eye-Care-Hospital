@@ -3,7 +3,7 @@ import React from 'react';
 const ChooseUs = () => {
     return (
         <div>
-            <div id="" className="mt-5">
+            <div id="" className="my-5">
 
                 <div className="container mt-5">
                     <div className="row align-items-center mt-5">

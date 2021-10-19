@@ -1,8 +1,29 @@
-.service{
-    background-color: rgba(135, 138, 138, 0.371);
-    border-radius:20px ;
+
+.service_card{
+    background-color: cadetblue;
+    border-radius: 10px;
+    box-shadow: 4px 4px 7px rgb(92, 90, 92);
 }
-.service img{
-    width: 100%;
-    border-radius: 0px 0px 15px 15px;
+.service_card:hover{
+    transform: scale(1.03);
+    transition: transform .5s, opacity .4s;
+    box-shadow: 4px 4px 7px rgb(194, 112, 214);
+}
+img:hover{
+    transform: scale(0.9);
+    transition: transform .6s, opacity .3s;
+}
+.service_btn{
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  border: 1px solid rgba(94, 85, 138, 0.466);
+  background-image: linear-gradient(rgba(152, 79, 165, 0.856),rgba(61, 59, 122, 0.911));
+  color: white;
+}
+
+.service_btn:hover{
+    color: black;
+    background-color: rgb(130, 0, 54);
+    box-shadow: 10px 10px 20px rgb(106, 100, 100);
 }

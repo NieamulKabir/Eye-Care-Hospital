@@ -5,3 +5,7 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+.about_img:hover{
+    transform: scale(0.95);
+    transition: transform .6s, opacity .3s;
+}
