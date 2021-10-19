@@ -11,6 +11,8 @@ import Login from './Pages/Login/Login/Login';
 import Header from './Pages/Shared/Header/Header';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/Login/Login/PrivateRoute/PrivateRoute';
+import GetAppoinment from './Pages/Details/GetAppoinment/GetAppoinment';
+import Appointment from './Pages/Home/Appoinment/Appointment';
 
 
 function App() {
@@ -29,17 +31,23 @@ function App() {
             <PrivateRoute path="/serviceDetails/:serviceId">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
+            <PrivateRoute exact path="/appoinment">
+              <Appointment></Appointment>
+            </PrivateRoute>
+            <PrivateRoute path="/getAppoinment">
+              <GetAppoinment></GetAppoinment>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
-
             <Route exact path="*">
               <NotFound></NotFound>
             </Route>
           </Switch>
         </Router>
       </AuthProvider>
-
+      <br />
+      <br />
     </div>
   );
 }

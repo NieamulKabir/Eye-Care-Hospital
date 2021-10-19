@@ -13,20 +13,22 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand as={HashLink} to="/home#home">
 
-                        Eye<i class="far fa-eye"></i>Care
+                        Eye<i className="far fa-eye"></i>Care
 
                     </Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home#about">About</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#doctors">Doctors</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home#appoinment">Appoinment</Nav.Link>
 
                         {user?.email ?
                             <Button onClick={logOut} variant="light">Logout</Button> :
                             <Nav.Link as={Link} to="/login">Login</Nav.Link>}
-                        <Navbar.Text>
-                            Signed in as: <a href="#login">{user?.displayName}</a>
+                        <Navbar.Text className="mx-2">
+                           <strong> User:</strong> <a href="#login">{user?.displayName}</a>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>

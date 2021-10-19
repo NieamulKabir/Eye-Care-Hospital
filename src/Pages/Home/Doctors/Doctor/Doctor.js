@@ -8,7 +8,7 @@ const Doctor = ({ doctor }) => {
         <div className="container">
             <div className="doctor pb-3">
                 <div>
-                    <img src={img} alt="" />
+                    <img className="p-3" src={img} alt="" />
                 </div>
                 <div>
                     <h3>{name}</h3>

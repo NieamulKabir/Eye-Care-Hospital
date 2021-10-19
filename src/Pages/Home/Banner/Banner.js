@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import banner1 from '../../../images/banner/banner1.jpg'
 import banner2 from '../../../images/banner/banner2.jpg'
 import banner3 from '../../../images/banner/banner3.jpg'
+import './Banner.css'
 
 const Banner = () => {
     return (
@@ -15,8 +16,13 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <div className="carousel">
+                            <h5 className="text-danger">Critical Care Center</h5>
+                            <h1>Eye Care Specialist Services <br /> That You Can Trust</h1>
+                            <p>After the opening of his first vision center in Savannah, Georgia, this revolutionary eyecare center quickly met with success. For that reason, eyecare specialists recommend protective eyewear at all times when a person could be exposed to UV light, even on overcast days.</p>
+                        </div>
+
+
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -27,8 +33,12 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div className="carousel">
+                            <h5 className="text-danger">Critical Care Center</h5>
+                            <h1>High Innovation Professional Eye Care</h1>
+                            <p>After the opening of his first vision center in Savannah, Georgia, this revolutionary eyecare center quickly met with success. For that reason, eyecare specialists recommend protective eyewear at all times when a person could be exposed to UV light, even on overcast days.</p>
+                        </div>
+
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -39,8 +49,12 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <div className="carousel">
+                            <h5 className="text-danger">Critical Care Center</h5>
+                            <h1>We Only Give Best Care To Your Eyes</h1>
+                            <p>After the opening of his first vision center in Savannah, Georgia, this revolutionary eyecare center quickly met with success. For that reason, eyecare specialists recommend protective eyewear at all times when a person could be exposed to UV light, even on overcast days.</p>
+                        </div>
+
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

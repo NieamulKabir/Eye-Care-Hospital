@@ -12,18 +12,19 @@ const Doctors = () => {
     }, [])
     return (
         <div className="container" id="doctors">
-            <h2 className="text-primary mt-5">Our Doctors</h2>
+            <h6 className="text-primary mt-5">Our Doctors</h6>
+            <h1>Eye Care Specialist</h1>
             <div className="doctors_container">
-            {
-                doctors.map(doctor => <Doctor
-                    key={doctor.id}
-                    doctor={doctor}
-                >
+                {
+                    doctors.map(doctor => <Doctor
+                        key={doctor.id}
+                        doctor={doctor}
+                    >
 
-                </Doctor>)
-            }
+                    </Doctor>)
+                }
             </div>
-           
+
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card, CardGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Service.css'
 
@@ -8,7 +9,28 @@ const Service = ({ service }) => {
 
     return (
         <div className="container">
-            <div className="service pb-3">
+            <CardGroup>
+                <Card>
+                    <Card.Img variant="top" src={imgurl} />
+                    <Card.Body>
+                        <Card.Title>{title}</Card.Title>
+                        <Card.Text>
+                        {discription.slice(0, 75)}
+                        </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                    <Link to={`/serviceDetails/${id}`}>
+                        <button className="btn btn-success">More Details ...</button>
+                    </Link>
+                    </Card.Footer>
+                </Card>
+            
+            </CardGroup>
+
+
+
+
+            {/* <div className="service pb-3">
                 <div>
                     <img src={imgurl} alt="" />
                 </div>
@@ -21,7 +43,7 @@ const Service = ({ service }) => {
                     </Link>
 
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };
