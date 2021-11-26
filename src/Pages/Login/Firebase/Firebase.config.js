@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDLW5wn0QMfYJasV7NKCH_QIfCyDfLG8mw",
-    authDomain: "eyecare1924.firebaseapp.com",
-    projectId: "eyecare1924",
-    storageBucket: "eyecare1924.appspot.com",
-    messagingSenderId: "972907501247",
-    appId: "1:972907501247:web:8ffe75427e9c6d8221180a"
-  };
+  apiKey: "AIzaSyBMP072Nv150Xwa455Pr2YlNxc03Ei3MqA",
+  authDomain: "eyecare-1924.firebaseapp.com",
+  projectId: "eyecare-1924",
+  storageBucket: "eyecare-1924.appspot.com",
+  messagingSenderId: "5466275989",
+  appId: "1:5466275989:web:ca93a8a7dee917ca54db9c"
+};
 
-  export default firebaseConfig;
+export default firebaseConfig;

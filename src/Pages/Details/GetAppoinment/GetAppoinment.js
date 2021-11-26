@@ -38,7 +38,7 @@ const GetAppoinment = () => {
                     </div>
                 </div>
             </div>
-      
+
         </div >
     );
 };
